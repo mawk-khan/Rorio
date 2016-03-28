@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 /*
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'repo-wpy' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'rorio-theme' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

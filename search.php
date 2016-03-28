@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 get_header(); ?>

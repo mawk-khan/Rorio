@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 get_header(); ?>

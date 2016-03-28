@@ -2,7 +2,7 @@
 /**
  * Template Name: Front Page
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 get_header(); ?>
 

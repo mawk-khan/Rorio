@@ -1,8 +1,8 @@
 <?php
 /**
- * WordPress Repo Theme Customizer
+ * Rorio Theme Theme Customizer
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 /**
@@ -10,17 +10,17 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function repo_wpy_customize_register( $wp_customize ) {
+function rorio_theme_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'repo_wpy_customize_register' );
+add_action( 'customize_register', 'rorio_theme_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function repo_wpy_customize_preview_js() {
-	wp_enqueue_script( 'repo_wpy_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function rorio_theme_customize_preview_js() {
+	wp_enqueue_script( 'rorio_theme_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
-add_action( 'customize_preview_init', 'repo_wpy_customize_preview_js' );
+add_action( 'customize_preview_init', 'rorio_theme_customize_preview_js' );

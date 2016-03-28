@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 ?>
@@ -16,14 +16,14 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'repo-wpy' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rorio-theme' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', 'repo-wpy' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'rorio-theme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

@@ -1,4 +1,4 @@
-=== WordPress Repo ===
+=== Rorio Theme ===
 
 Contributors: automattic
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A custom starter theme called WordPress Repo.
+A custom starter theme called Rorio Theme.
 
 == Description ==
 
-Every Components package comes with
+Some Text goes here...
 
 == Installation ==
 
@@ -25,7 +25,7 @@ Every Components package comes with
 
 = Does this theme support any plugins? =
 
-WordPress Repo includes support for Jetpack's Infinite Scroll and Site Logos, as well as other features.
+Rorio Theme includes support for Jetpack's Infinite Scroll and Site Logos, as well as other features.
 
 == Changelog ==
 
@@ -34,5 +34,5 @@ WordPress Repo includes support for Jetpack's Infinite Scroll and Site Logos, as
 
 == Credits ==
 
-* Based on WordPress Repo http://components.underscores.me/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Based on Rorio Theme http://components.underscores.me/, (C) 2015-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)

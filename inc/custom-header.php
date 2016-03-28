@@ -11,33 +11,33 @@
 	</a>
 	<?php endif; // End header image check. ?>
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses repo_wpy_header_style()
+ * @uses rorio_theme_header_style()
  */
-function repo_wpy_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'repo_wpy_custom_header_args', array(
+function rorio_theme_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'rorio_theme_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'repo_wpy_header_style',
+		'wp-head-callback'       => 'rorio_theme_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'repo_wpy_custom_header_setup' );
+add_action( 'after_setup_theme', 'rorio_theme_custom_header_setup' );
 
-if ( ! function_exists( 'repo_wpy_header_style' ) ) :
+if ( ! function_exists( 'rorio_theme_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see repo_wpy_custom_header_setup().
+ * @see rorio_theme_custom_header_setup().
  */
-function repo_wpy_header_style() {
+function rorio_theme_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -70,4 +70,4 @@ function repo_wpy_header_style() {
 	</style>
 	<?php
 }
-endif; // repo_wpy_header_style
+endif; // rorio_theme_header_style

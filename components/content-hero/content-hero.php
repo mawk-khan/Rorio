@@ -2,12 +2,12 @@
 /**
  * The template used for displaying hero content.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 ?>
 
 <?php if ( has_post_thumbnail() ) : ?>
-	<div class="repo-wpy-hero">
-		<?php the_post_thumbnail( 'repo-wpy-hero' ); ?>
+	<div class="rorio-theme-hero">
+		<?php the_post_thumbnail( 'rorio-theme-hero' ); ?>
 	</div><!-- .hero -->
 <?php endif; ?>

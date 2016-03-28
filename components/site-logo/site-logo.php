@@ -1,1 +1,1 @@
-<?php repo_wpy_the_site_logo(); ?>
+<?php rorio_theme_the_site_logo(); ?>

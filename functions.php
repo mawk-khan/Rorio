@@ -2,10 +2,10 @@
 /**
  * Theme functions and definitions
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
-if ( ! function_exists( 'repo_wpy_setup' ) ) :
+if ( ! function_exists( 'rorio_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -13,14 +13,14 @@ if ( ! function_exists( 'repo_wpy_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function repo_wpy_setup() {
+function rorio_theme_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on WordPress Repo, use a find and replace
-	 * to change 'repo-wpy' to the name of your theme in all the template files
+	 * If you're building a theme based on Rorio Theme, use a find and replace
+	 * to change 'rorio-theme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'repo-wpy', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'rorio-theme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -40,13 +40,13 @@ function repo_wpy_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'repo-wpy-hero', 1280, 1000, true );
-	add_image_size( 'repo-wpy-thumbnail-avatar', 100, 100, true );
+	add_image_size( 'rorio-theme-hero', 1280, 1000, true );
+	add_image_size( 'rorio-theme-thumbnail-avatar', 100, 100, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'top-menu' => esc_html__( 'Top Menu', 'repo-wpy' ),
-		'social'  => __( 'Social Links Menu', 'repo-wpy' ),
+		'top-menu' => esc_html__( 'Top Menu', 'rorio-theme' ),
+		'social'  => __( 'Social Links Menu', 'rorio-theme' ),
 	) );
 
 	/*
@@ -74,13 +74,13 @@ function repo_wpy_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'repo_wpy_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'rorio_theme_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // repo_wpy_setup
-add_action( 'after_setup_theme', 'repo_wpy_setup' );
+endif; // rorio_theme_setup
+add_action( 'after_setup_theme', 'rorio_theme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -89,19 +89,19 @@ add_action( 'after_setup_theme', 'repo_wpy_setup' );
  *
  * @global int $content_width
  */
-function repo_wpy_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'repo_wpy_content_width', 640 );
+function rorio_theme_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'rorio_theme_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'repo_wpy_content_width', 0 );
+add_action( 'after_setup_theme', 'rorio_theme_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function repo_wpy_widgets_init() {
+function rorio_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'repo-wpy' ),
+		'name'          => esc_html__( 'Sidebar', 'rorio-theme' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -110,23 +110,23 @@ function repo_wpy_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'repo_wpy_widgets_init' );
+add_action( 'widgets_init', 'rorio_theme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function repo_wpy_scripts() {
-	wp_enqueue_style( 'repo-wpy-style', get_stylesheet_uri() );
+function rorio_theme_scripts() {
+	wp_enqueue_style( 'rorio-theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'repo-wpy-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'rorio-theme-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'repo-wpy-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'rorio-theme-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'repo_wpy_scripts' );
+add_action( 'wp_enqueue_scripts', 'rorio_theme_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -152,12 +152,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/tgm-plugin-activation.php';
-/**
- * Load Dashboard file.
- */
-require get_template_directory() . '/inc/dashboard.php';

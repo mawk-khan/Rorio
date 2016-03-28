@@ -2,7 +2,7 @@
 /**
  * The template for displaying search forms
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 ?>
 

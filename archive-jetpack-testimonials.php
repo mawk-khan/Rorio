@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Testimonials archive page.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 get_header(); ?>

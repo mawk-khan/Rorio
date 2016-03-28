@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 get_header(); ?>

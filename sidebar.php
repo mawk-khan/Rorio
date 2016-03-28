@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package WordPress_Repo
+ * @package Rorio_Theme
  */
 
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
