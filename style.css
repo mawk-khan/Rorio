@@ -110,10 +110,12 @@ dfn {
   font-style: italic;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+h1 { font-size: 2.0625rem; line-height: 1.3; }
+h2 { font-size: 1.5625rem; line-height: 1.2; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+h4 { font-size: 1.0625rem; margin-bottom: 12px; }
+h5 { font-size: 0.9375rem; font-weight: 700; text-transform: uppercase; }
+h6 { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
 
 mark {
   background: #ff0;
@@ -270,14 +272,19 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both;
+	clear: both;
+    color: #333333;
+    font-family: "Raleway",Helvetica,Arial,sans-serif;
+	font-weight: 600;
+	margin-bottom: 0.9375rem;
+	margin-top: 0;
 }
 
 p {
@@ -335,13 +342,6 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
-}
-
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
@@ -361,8 +361,8 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul, ol {
-  margin: 0 0 1.5em 3em;
+ul li, ol li {
+    margin: 8px 0;
 }
 
 ul {
@@ -406,24 +406,28 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	background: #03c4eb none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 2px;
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 3px 0;
+    padding: 15px 23px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  opacity: 0.8;
 }
 button:active, button:focus,
 input[type="button"]:active,
@@ -432,27 +436,45 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+}
+select {
+    border: 1px solid #e9e9e9;
+    max-width: 100%;
+    outline: medium none;
+    overflow: auto;
+    padding: 10px;
+    vertical-align: top;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+textarea, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f2f2f2;
+    border-color: -moz-use-text-color -moz-use-text-color #fff;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    box-sizing: border-box;
+    color: #000000;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 22px;
+    max-width: 100%;
+    padding: 10px;
+    transition: all 0.2s linear 0s;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-  color: #111;
+textarea:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus {
+    background: #e9e9e9 none repeat scroll 0 0;
+    border-bottom: 1px solid #fff !important;
+    border-left-color: #ebebeb;
+    border-right-color: #ebebeb;
+    border-top-color: #ebebeb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    transition: all 0.2s linear 0s;
 }
 
 input[type="text"],
@@ -464,6 +486,7 @@ input[type="search"] {
 }
 
 textarea {
+  resize: vertical;
   padding-left: 3px;
   width: 100%;
 }
@@ -493,12 +516,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
+
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -534,6 +552,15 @@ a:hover, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  display: block;
+  color: #333333;
+  font-family: "Raleway",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-left: 18px;
+  padding-right: 18px;
+  text-transform: uppercase;
 }
 
 /* Small menu. */
@@ -655,17 +682,70 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
+.sidebar .widget {
+    margin-bottom: 40px;
 }
+.sidebar .widget a {
+    color: #777777;
+    font-size: 14px;
+}
+
 .widget select {
   max-width: 100%;
 }
 
+.sidebar .widget .widget-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.sidebar .widget ul {
+    list-style: outside none none;
+    padding: 0;
+}
+
+.sidebar .widget ul::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* Search widget. */
 .widget_search .search-submit {
-  display: none;
+  display: block;
+}
+
+/* Recent Entries. */
+.widget_recent_entries ul li {
+    border-bottom: 1px solid #e9e9e9;
+    margin: 0;
+    padding: 10px 0;
+}
+/* Recent comments. */
+.widget_recent_comments ul {
+    margin-top: 25px;
+}
+
+.widget_recent_comments ul li {
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.widget_recent_comments ul a { font-style: italic; }
+
+.widget_recent_comments .comment-author-link a {font-style: normal; font-weight:bold; }
+
+/* Categories, Archive, Meta. */
+.widget-area .widget_categories li, .widget-area .widget_archive li, .widget-area .widget_meta li {
+    float: left;
+    margin-bottom: 0;
+    width: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -673,12 +753,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .content-area {
   float: left;
-  margin: 0 -25% 0 0;
   width: 100%;
-}
-
-.site-main {
-  margin: 0 25% 0 0;
 }
 
 .site-content .widget-area {
@@ -837,4 +912,108 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+/*--------------------------------------------------------------
+## Site header
+--------------------------------------------------------------*/
+.site-header {
+	background: #ffffff;
+	line-height: 75px;
+	position: relative;
+	width: 100%;
+	z-index: 99;
+}
+
+.site-branding {
+    float: left;
+}
+
+.site-branding .site-title, .site-branding .site-text-logo {
+    color: #000000;
+    display: initial;
+    font-family: "Raleway",Helvetica,Arial,sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.rorio-menu {
+    float: right;
+}
+
+.page-header {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    padding: 30px 0;
+}
+
+.page-header .entry-title, .page-header .page-title {
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+#primary {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.right-sidebar .content-area {
+	border-right: 1px solid #e9e9e9;
+	padding-right: 40px;
+	width: 75.05%;
+}
+
+.right-sidebar .sidebar {
+	border-left: 1px solid #e9e9e9;
+    margin-left: -1px;
+    padding-left: 39px;
+}
+
+#secondary {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.sidebar {
+    float: left;
+    width: 25.2252%;
+}
+
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer .rorio-footer-info {
+	background: #222222;
+	color: #bbb;
+	font-weight: 500;
+	padding:  35px 0;
+	position: relative;
+	text-align: center;
+}
+
+.site-footer .back-2-top a {
+    background: #222222 none repeat scroll 0 0;
+    border-radius: 0 20px 0 0;
+    color: #999999;
+    display: block;
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    position: absolute;
+    right: 60px;
+    top: -25px;
+    transform: rotate(-45deg);
+    transition: all 0.2s linear 0s;
+    width: 50px;
 }

@@ -12,6 +12,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+	<?php //echo onepress_breadcrumb(); ?>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -26,4 +28,3 @@
 		<?php edit_post_link( esc_html__( 'Edit', 'rorio-theme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-

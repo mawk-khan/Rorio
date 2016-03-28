@@ -27,7 +27,7 @@
 
 	menu.setAttribute( 'aria-expanded', 'false' );
 	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
+		menu.className += 'nav-menu rorio-menu';
 	}
 
 	button.onclick = function() {

@@ -21,15 +21,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rorio-theme' ); ?></a>
+	<div class="site-header-wrap">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="container">
+				<?php get_template_part( 'components/branding/branding' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
+				<?php get_template_part( 'components/site-logo/site-logo' ); ?>
 
-		<?php get_template_part( 'components/branding/branding' ); ?>
-
-		<?php get_template_part( 'components/site-logo/site-logo' ); ?>
-
-		<?php get_template_part( 'components/top-navigation/top-navigation' ); ?>
-
-	</header><!-- #masthead -->
-
+				<?php get_template_part( 'components/top-navigation/top-navigation' ); ?>
+			</div>
+		</header><!-- #masthead -->
+	</div>
 	<div id="content" class="site-content">

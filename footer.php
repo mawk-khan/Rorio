@@ -12,9 +12,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-
-		<?php get_template_part( 'components/site-info/site-info' ); ?>
-
+		<div class="rorio-footer-info">
+			<div class="container">
+				<?php get_template_part( 'components/site-info/site-info' ); ?>
+			</div><!-- #container -->
+		</div><!-- #rorio-footer-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
