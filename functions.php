@@ -130,7 +130,7 @@ function rorio_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'rorio_theme_scripts' );
 
-if ( ! function_exists( 'onepress_admin_scripts' ) ) :
+if ( ! function_exists( 'rorio_admin_scripts' ) ) :
 /**
  * Enqueue scripts for admin page only: Theme info page
  */
