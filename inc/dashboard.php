@@ -43,7 +43,7 @@ function rorio_one_activation_admin_notice(){
 add_action( 'load-themes.php',  'rorio_one_activation_admin_notice'  );
 
 function rorio_theme_info_page() {
-	$theme_data = wp_get_theme( 'rorio' );
+	$theme_data = wp_get_theme();
 
 	if ( isset( $_GET['rorio_action_dismiss'] ) ) {
 		$actions_dismiss = get_option( 'rorio_actions_dismiss' );
