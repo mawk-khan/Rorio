@@ -130,6 +130,16 @@ function rorio_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'rorio_theme_scripts' );
 
+if ( ! function_exists( 'onepress_admin_scripts' ) ) :
+/**
+ * Enqueue scripts for admin page only: Theme info page
+ */
+function rorio_admin_scripts( $hook ) {
+	wp_enqueue_style('rorio-admin-css', get_template_directory_uri() . '/assets/css/admin.css');
+}
+endif;
+add_action('admin_enqueue_scripts', 'rorio_admin_scripts');
+
 /**
  * Implement the Custom Header feature.
  */
